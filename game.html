@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+       <!-- Navigation Menu (same on all pages) -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="discover.html">Discover UMD</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="career.html">Career</a></li>
+            <li><a href="game.html">Game</a></li>
+        </ul>
+    </nav>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matching Game</title>
+  <!-- link to your project stylesheet -->
+  <link rel="stylesheet" href="CSS/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <h1>Matching Game</h1>
+      <p class="muted">Find the matching pairs. Beat the timer!</p>
+    </header>
+
+    <section class="game-wrap">
+      <!-- Optional: set data-images to a comma-separated list of image paths
+           relative to this file. If omitted the game uses images/game1.png ... game8.png -->
+      <div id="game-root" data-images="images/game1.png, images/game2.png, images/Game3.png, images/game4.png, images/game5.png, images/game6.png, images/game7.png, images/game8.png" aria-live="polite">
+        Loading game…
+      </div>
+      <noscript>Please enable JavaScript to play.</noscript>
+    </section>
+  </main>
+
+  <!-- game script (deferred so DOM is available) -->
+  <script src="js/game.js" defer></script>
+
+   <audio id="bg-music" autoplay loop>
+    <source src="videos/backgroundmusic.wav" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    const music = document.getElementById('bg-music');
+
+    // Try to play automatically
+    music.play().catch(() => {
+      console.log("Autoplay blocked — trying muted playback");
+      music.muted = true;
+      music.play();
+
+      // Optional: unmute after 2 seconds (fade-in effect)
+      setTimeout(() => {
+        music.muted = false;
+      }, 2000);
+    });
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eva - Resume Page</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+     <style>
+     body {
+    background: rgb(255, 255, 255); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+     }
+
+      h2, h3,li, ul, p, a {
+    color: rgb(0, 0, 0);
+
+    font-family: Georgia
+  }
+  h1{
+    color: #7a0019;
+    font-family: Georgia
+  }
+    </style>
+
+</head>
+<body>
+    <!-- Navigation Menu (same on all pages) -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="discover.html">Discover UMD</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="career.html">Career</a></li>
+            <li><a href="game.html">Game</a></li>
+        </ul>
+    </nav>
+    <h1>Resume</h1>
+
+    <!-- Your page content goes here -->
+    <main>
+        <!-- Page-specific content -->
+         <h2>Eva Roark</h2>
+         <p>roark.evajoy@gmail.com | 218-410-9896 | evaroark.com</p>
+         <h3>Education:</h3>
+         <p><strong>Minnesota North Community College,</strong> Virginia MN</p>
+         <ul>• Graduated with my Associates Degree</ul>
+         <ul>• Graduated in 2023</ul>
+         <p><strong>University of Minnesota Duluth,</strong> Duluth MN</p>
+         <ul>• Studying for a Bachelors of Fine Arts in Graphic Design and a Minor in Human Resource Management</ul>
+         <ul>• Expected graduation date of Fall 2026</ul>
+         <h3>Experience:</h3>
+         <p><strong>W. A. Fisher </strong><em>Design Internship, </em>Summer 2024</p>
+         <ul>• Learned how to manage large scale printers and cutters</ul>
+         <ul>• Learned skills in Indesign and Illustrator</ul>
+         <ul>• Made products such as stickers, posters, and informational pamphlets</ul>
+         <p><strong>Minnesota Discovery Center </strong><em>Front Desk and Event Staff, </em>2021-2022</p>
+         <ul>• Handled phone calls and reservations</ul>
+         <ul>• Helped customers purchase what they needed to access the museum and extra activities</ul>
+         <ul>• Helped events run smoothly and pitched in where work needed to be done</ul>
+         <ul>• Worked comfortably with co-workers to make sure events ran smoothly</ul>
+         <h3>Skills:</h3>
+         <ul>• Proficiency in Adobe products such as Illustrator and Indesign, with experience in Figma</ul>
+         <ul>• Basic knowledge of HTML and CSS code</ul>
+         <ul>• Interpersonal communication</ul>
+
+
+    </main>
+
+ <button id="downloadBtn">Download My Resume</button>
+  <script>
+    document.getElementById("downloadBtn").addEventListener("click", function() {
+      const link = document.createElement("a");
+      link.href = "files/resume.pdf"; // Path to your resume file
+      link.download = "resume.pdf"; // Desired file name
+      link.click();
+    });
+  </script>
+    <!-- Footer (same on all pages) -->
+    <footer>
+        <p>&copy; 2025 Eva Roark. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
